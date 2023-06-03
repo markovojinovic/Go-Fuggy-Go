@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slowSharkPrefab: {fileID: 1454577426813145750, guid: af03bae4221ef4e4e8de358936b10571, type: 3}
-  fastSharkPrefab: {fileID: 1454577426813145750, guid: af03bae4221ef4e4e8de358936b10571, type: 3}
+  fastSharkPrefab: {fileID: 7335716375770051206, guid: 4b51d04d5e1babe4496e9ccb6f0bc7e6, type: 3}
   mainCamera: {fileID: 519420031}
 --- !u!1 &519420028
 GameObject:
