@@ -25,13 +25,13 @@ public class SharkGenerator : MonoBehaviour
     void Update()
     {
         bottomLeftCorner = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
-        bottomLeftCorner.y -= 2f;
+        bottomLeftCorner.y -= 1f;
 
         // Calculate the bottom right corner in screen coordinates
         Vector3 bottomRightScreenPoint = new Vector3(Screen.width, 0f, mainCamera.nearClipPlane);
         // Convert the screen point to world coordinates
         bottomRightCorner = mainCamera.ScreenToWorldPoint(bottomRightScreenPoint);
-        bottomRightCorner.y -= 2f;
+        bottomRightCorner.y -= 1f;
     }
 
     private IEnumerator SpawnObjectsPeriodically()
@@ -44,7 +44,7 @@ public class SharkGenerator : MonoBehaviour
             }
             else {
                 if (Random.Range(0f, 1f) > 0.5f) { // Orientation coinflip
-                    float x = Random.Range(bottomLeftCorner.x, bottomRightCorner.x * 0.6f);
+                    float x = Random.Range(bottomLeftCorner.x + (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f, bottomRightCorner.x - (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f);
                     objectPosition = new Vector3(x, bottomLeftCorner.y);
                     // Instantiate the object
                     GameObject instantiatedShark;
@@ -55,7 +55,7 @@ public class SharkGenerator : MonoBehaviour
                     controller.setShark(instantiatedShark);
                 }
                 else {
-                    float x = Random.Range(bottomLeftCorner.x * 0.6f, bottomRightCorner.x);
+                    float x = Random.Range(bottomLeftCorner.x + (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f, bottomRightCorner.x - (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f);
                     objectPosition = new Vector3(x, bottomLeftCorner.y);
 
                     // Instantiate the object
