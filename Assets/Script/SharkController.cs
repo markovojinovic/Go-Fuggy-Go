@@ -62,5 +62,9 @@ public class SharkController : MonoBehaviour
         {
             this.changeDirection(-1f);
         }
+        else if (collider.gameObject.name == "Fuggy")
+        {
+            Debug.Log("Udario fuggy");
+        }
     }
 }
