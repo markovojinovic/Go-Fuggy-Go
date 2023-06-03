@@ -37,7 +37,7 @@ public class SharkGenerator : MonoBehaviour
         Vector3 objectPosition;
         while (true)
         {   
-            if (i == 0) {
+            if (i == 0) { // To skip first cycle of generation
                 i++;
             }
             else {
