@@ -79,7 +79,7 @@ public class SharkController : MonoBehaviour
 
     private void StopRendering()
     {
-        Invoke("quitGame", 5f);
+        Invoke("quitGame", 2f);
         Instantiate(gameOverText, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 
