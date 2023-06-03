@@ -3,7 +3,7 @@ using UnityEngine;
 public class FuggyController : MonoBehaviour
 {
     public Vector2 initialVelocity = new Vector2(0f, 2f);   // The initial velocity to apply
-    public Camera camera;
+    public Camera ourCamera;
 
     public float moveSpeed = 5f;  // Movement speed
 
@@ -27,7 +27,7 @@ public class FuggyController : MonoBehaviour
         transform.position = newPosition;
 
 
-        camera.transform.position = new Vector3(0f, rb.transform.position.y, camera.transform.position.z);
+        ourCamera.transform.position = new Vector3(0f, rb.transform.position.y, ourCamera.transform.position.z);
     }
 
 }
