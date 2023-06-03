@@ -18,7 +18,7 @@ public class FuggyController : MonoBehaviour
     private void Update(){
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        Vector2 movementDirection = new Vector3(horizontalInput, 0f);
+        Vector3 movementDirection = new Vector3(horizontalInput, 0f);
 
         // Calculate the object's new position
         Vector3 newPosition = transform.position + movementDirection * moveSpeed * Time.deltaTime;
