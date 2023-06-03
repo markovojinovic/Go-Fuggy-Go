@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 405779709}
   - component: {fileID: 405779710}
   m_Layer: 0
-  m_Name: SharkGenerator
+  m_Name: ObjectGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,6 +370,7 @@ MonoBehaviour:
   slowSharkPrefab: {fileID: 1454577426813145750, guid: af03bae4221ef4e4e8de358936b10571, type: 3}
   fastSharkPrefab: {fileID: 7335716375770051206, guid: 4b51d04d5e1babe4496e9ccb6f0bc7e6, type: 3}
   mainCamera: {fileID: 519420031}
+  dolphinPrefab: {fileID: 2807335154922450100, guid: 602ed4bbb4c2bf541aefbbbcef6a391a, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

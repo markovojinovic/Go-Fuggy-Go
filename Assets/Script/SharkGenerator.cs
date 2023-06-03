@@ -8,6 +8,7 @@ public class SharkGenerator : MonoBehaviour
     public GameObject slowSharkPrefab;
     public GameObject fastSharkPrefab;
     public Camera mainCamera;
+    public GameObject dolphinPrefab;
 
     private Vector3 bottomLeftCorner;
     private Vector3 bottomRightCorner;
