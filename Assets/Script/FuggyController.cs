@@ -5,17 +5,29 @@ public class FuggyController : MonoBehaviour
     public Vector2 initialVelocity = new Vector2(0f, 2f);   // The initial velocity to apply
     public Camera camera;
 
+    public float moveSpeed = 5f;  // Movement speed
+
     private Rigidbody2D rb;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = initialVelocity;
-        camera.transform.position = new Vector3(0f, rb.transform.position.y, -10);
     }
 
     private void Update(){
-        camera.transform.position = new Vector3(0f, rb.transform.position.y, -10);
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        Vector2 movementDirection = new Vector3(horizontalInput, 0f);
+
+        // Calculate the object's new position
+        Vector3 newPosition = transform.position + movementDirection * moveSpeed * Time.deltaTime;
+
+        // Update the object's position
+        transform.position = newPosition;
+
+
+        camera.transform.position = new Vector3(0f, rb.transform.position.y, camera.transform.position.z);
     }
 
 }
