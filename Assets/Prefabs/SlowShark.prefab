@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3499045331161465793}
   - component: {fileID: 4323807373950858154}
   m_Layer: 0
-  m_Name: Shark
+  m_Name: SlowShark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
