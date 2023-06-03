@@ -13,7 +13,7 @@ public class FuggyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = initialVelocity;
-    }
+    }
 
     private void Update(){
         float horizontalInput = Input.GetAxis("Horizontal");
