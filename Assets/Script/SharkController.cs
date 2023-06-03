@@ -6,7 +6,9 @@ public class SharkController : MonoBehaviour
 {
 
     private float directionRight = 1f;
-    private int velocity = 2;
+    private float velocity = 2f;
+    private const float RIGHT_ORIENTED = -90f;
+    private const float LEFT_ORIENTED = 90f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +24,13 @@ public class SharkController : MonoBehaviour
         Vector3 newPosition = transform.position + movementDirection * velocity * Time.deltaTime;
 
         transform.position = newPosition;
+    }
+
+    public void setDirection(float dir) { 
+        this.directionRight = dir;
+        if (dir > 0f)
+            transform.Rotate(0f, 0f, RIGHT_ORIENTED);
+        else 
+            transform.Rotate(0f, 0f, LEFT_ORIENTED);
     }
 }

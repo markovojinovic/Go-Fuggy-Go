@@ -29,7 +29,7 @@ public class FuggyController : MonoBehaviour
 
         rb.velocity = initialVelocity;
 
-        Debug.Log(initialVelocity);
+        // Debug.Log(initialVelocity);
 
         ourCamera.transform.position = new Vector3(0f, rb.transform.position.y, ourCamera.transform.position.z);
     }
