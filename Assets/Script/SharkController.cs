@@ -33,7 +33,7 @@ public class SharkController : MonoBehaviour
         this.directionRight = dir;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        if (dir > 0)
+        if (dir < 0)
             spriteRenderer.flipX = !spriteRenderer.flipX;
         
     }
@@ -49,20 +49,20 @@ public class SharkController : MonoBehaviour
 
     public void setShark(GameObject shark) { this.shark = shark; }
 
-    private void OnTriggerEnter2D(Collider2D collider) {
-        if (collider.gameObject.name == "TriggerUpper")
+    private void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.collider.gameObject.name == "TriggerUpper")
         {
             Destroy(this.shark);
         }
-        else if (collider.gameObject.name == "ColliderLeft")
+        else if (collision.collider.gameObject.name == "ColliderLeft")
         {
             this.changeDirection(1f);
         }
-        else if (collider.gameObject.name == "ColliderRight")
+        else if (collision.collider.gameObject.name == "ColliderRight")
         {
             this.changeDirection(-1f);
         }
-        else if (collider.gameObject.name == "Fuggy")
+        else if (collision.collider.gameObject.name == "Fuggy")
         {
             Debug.Log("Udario fuggy");
         }

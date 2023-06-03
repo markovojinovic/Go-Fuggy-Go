@@ -5,12 +5,14 @@ using UnityEngine;
 public class SharkGenerator : MonoBehaviour
 {
 
-    public GameObject sharkPrefab;
+    public GameObject slowSharkPrefab;
+    public GameObject fastSharkPrefab;
     public Camera mainCamera;
 
     private Vector3 bottomLeftCorner;
     private Vector3 bottomRightCorner;
     private float spawnInterval = 2f;
+    private float fastSharkChance = 0.06f;
     private int i = 0;
 
     // Start is called before the first frame update
@@ -41,18 +43,23 @@ public class SharkGenerator : MonoBehaviour
                 i++;
             }
             else {
-                if (Random.Range(0f, 1f) > 0.5f) {
-                    objectPosition = new Vector3(bottomLeftCorner.x, bottomLeftCorner.y);
+                if (Random.Range(0f, 1f) > 0.5f) { // Orientation coinflip
+                    float x = Random.Range(bottomLeftCorner.x, bottomRightCorner.x * 0.6f);
+                    objectPosition = new Vector3(x, bottomLeftCorner.y);
                     // Instantiate the object
-                    GameObject instantiatedShark = Instantiate(sharkPrefab, objectPosition, Quaternion.identity);
+                    GameObject instantiatedShark;
+                    // if (Random.Range(0f, 1f) <= fastSharkChance)
+                        instantiatedShark = Instantiate(slowSharkPrefab, objectPosition, Quaternion.identity);
                     SharkController controller = instantiatedShark.GetComponent<SharkController>();
                     controller.setInitialDirection(1f);
                     controller.setShark(instantiatedShark);
                 }
                 else {
-                    objectPosition = new Vector3(bottomRightCorner.x, bottomRightCorner.y);
+                    float x = Random.Range(bottomLeftCorner.x * 0.6f, bottomRightCorner.x);
+                    objectPosition = new Vector3(x, bottomLeftCorner.y);
+
                     // Instantiate the object
-                    GameObject instantiatedShark = Instantiate(sharkPrefab, objectPosition, Quaternion.identity);
+                    GameObject instantiatedShark = Instantiate(slowSharkPrefab, objectPosition, Quaternion.identity);
                     SharkController controller = instantiatedShark.GetComponent<SharkController>();
                     controller.setInitialDirection(-1f);
                     controller.setShark(instantiatedShark);

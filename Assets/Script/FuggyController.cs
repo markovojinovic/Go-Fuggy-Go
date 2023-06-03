@@ -56,7 +56,6 @@ public class FuggyController : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.RightArrow))
             initialVelocity.x = 0;
 
-
         Vector2 newFuggyPosition = rb.position + initialVelocity * Time.deltaTime;
         newFuggyPosition.x = Mathf.Clamp(newFuggyPosition.x, boundaryLeft, boundaryRight);
         rb.position = newFuggyPosition;
