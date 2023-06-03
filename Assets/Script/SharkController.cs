@@ -11,10 +11,12 @@ public class SharkController : MonoBehaviour
     private const float LEFT_ORIENTED = 90f;
     private GameObject shark;
 
+    private SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -29,18 +31,20 @@ public class SharkController : MonoBehaviour
 
     public void setInitialDirection(float dir) { 
         this.directionRight = dir;
-        if (dir > 0f)
-            transform.Rotate(0f, 0f, -RIGHT_ORIENTED);
-        else 
-            transform.Rotate(0f, 0f, -LEFT_ORIENTED);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (dir > 0)
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+        
     }
 
     public void changeDirection(float dir) { 
         this.directionRight = dir;
-        if (dir > 0f)
-            transform.Rotate(0f, 0f, 2*RIGHT_ORIENTED);
-        else 
-            transform.Rotate(0f, 0f, 2*LEFT_ORIENTED);
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+        // if (dir > 0f)
+        //     transform.Rotate(0f, 0f, 2*RIGHT_ORIENTED);
+        // else 
+        //     transform.Rotate(0f, 0f, 2*LEFT_ORIENTED);
     }
 
     public void setShark(GameObject shark) { this.shark = shark; }
