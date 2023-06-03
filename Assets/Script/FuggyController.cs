@@ -5,7 +5,7 @@ public class FuggyController : MonoBehaviour
     public Vector2 initialVelocity = new Vector2(0f, 2f);   // The initial velocity to apply
     public Camera ourCamera;
 
-    public float moveSpeed = 5f;  // Movement speed
+    public float moveSpeed = 5f;
 
     private Rigidbody2D rb;
 
@@ -28,8 +28,6 @@ public class FuggyController : MonoBehaviour
         
 
         rb.velocity = initialVelocity;
-
-        // Debug.Log(initialVelocity);
 
         ourCamera.transform.position = new Vector3(0f, rb.transform.position.y, ourCamera.transform.position.z);
     }

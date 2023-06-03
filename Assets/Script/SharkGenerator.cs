@@ -11,6 +11,7 @@ public class SharkGenerator : MonoBehaviour
     private Vector3 bottomLeftCorner;
     private Vector3 bottomRightCorner;
     private float spawnInterval = 2f;
+    private int i = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,15 +23,13 @@ public class SharkGenerator : MonoBehaviour
     void Update()
     {
         bottomLeftCorner = mainCamera.ScreenToWorldPoint(new Vector3(0, 0, mainCamera.nearClipPlane));
-        
-        // Debug.Log("Bottom Left Corner: " + bottomLeftCorner);
+        bottomLeftCorner.y -= 2f;
 
         // Calculate the bottom right corner in screen coordinates
         Vector3 bottomRightScreenPoint = new Vector3(Screen.width, 0f, mainCamera.nearClipPlane);
         // Convert the screen point to world coordinates
         bottomRightCorner = mainCamera.ScreenToWorldPoint(bottomRightScreenPoint);
-
-        // Debug.Log("Bottom Right Corner: " + bottomRightCorner);
+        bottomRightCorner.y -= 2f;
     }
 
     private IEnumerator SpawnObjectsPeriodically()
@@ -38,19 +37,26 @@ public class SharkGenerator : MonoBehaviour
         Vector3 objectPosition;
         while (true)
         {   
-            if (Random.Range(0f, 1f) > 0.5f) {
-                objectPosition = new Vector3(bottomLeftCorner.x, bottomLeftCorner.y);
-                // Instantiate the object
-                GameObject instantiatedShark = Instantiate(sharkPrefab, objectPosition, Quaternion.identity);
-                SharkController controller = instantiatedShark.GetComponent<SharkController>();
-                controller.setDirection(1f);
+            if (i == 0) {
+                i++;
             }
             else {
-                objectPosition = new Vector3(bottomRightCorner.x, bottomRightCorner.y);
-                // Instantiate the object
-                GameObject instantiatedShark = Instantiate(sharkPrefab, objectPosition, Quaternion.identity);
-                SharkController controller = instantiatedShark.GetComponent<SharkController>();
-                controller.setDirection(-1f);
+                if (Random.Range(0f, 1f) > 0.5f) {
+                    objectPosition = new Vector3(bottomLeftCorner.x, bottomLeftCorner.y);
+                    // Instantiate the object
+                    GameObject instantiatedShark = Instantiate(sharkPrefab, objectPosition, Quaternion.identity);
+                    SharkController controller = instantiatedShark.GetComponent<SharkController>();
+                    controller.setInitialDirection(1f);
+                    controller.setShark(instantiatedShark);
+                }
+                else {
+                    objectPosition = new Vector3(bottomRightCorner.x, bottomRightCorner.y);
+                    // Instantiate the object
+                    GameObject instantiatedShark = Instantiate(sharkPrefab, objectPosition, Quaternion.identity);
+                    SharkController controller = instantiatedShark.GetComponent<SharkController>();
+                    controller.setInitialDirection(-1f);
+                    controller.setShark(instantiatedShark);
+                }
             }
 
             // Wait for the specified interval before spawning the next object
