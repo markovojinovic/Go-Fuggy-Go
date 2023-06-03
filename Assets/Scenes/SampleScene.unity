@@ -367,7 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 054b02d6c0a96454682d9088907ad3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharkPrefab: {fileID: 1454577426813145750, guid: af03bae4221ef4e4e8de358936b10571, type: 3}
+  slowSharkPrefab: {fileID: 1454577426813145750, guid: af03bae4221ef4e4e8de358936b10571, type: 3}
+  fastSharkPrefab: {fileID: 0}
   mainCamera: {fileID: 519420031}
 --- !u!1 &519420028
 GameObject:
@@ -783,6 +784,7 @@ MonoBehaviour:
   initialVelocity: {x: 0, y: -1}
   ourCamera: {fileID: 519420031}
   moveSpeed: 5
+  idleVerticalSpeed: -1
   score: 0
   tmpText: {fileID: 850125000}
 --- !u!58 &1024852325
@@ -798,9 +800,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.76894104}
   serializedVersion: 2
-  m_Radius: 0.50000006
+  m_Radius: 4.736714
 --- !u!1 &1244507458
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +903,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
