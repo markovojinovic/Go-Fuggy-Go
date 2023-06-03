@@ -11,8 +11,7 @@ public class SharkGenerator : MonoBehaviour
 
     private Vector3 bottomLeftCorner;
     private Vector3 bottomRightCorner;
-    private float spawnInterval = 2f;
-    private float fastSharkChance = 0.06f;
+    private const float FAST_SHARK_CHANCE = 0.06f;
     private int i = 0;
 
     // Start is called before the first frame update
@@ -43,31 +42,31 @@ public class SharkGenerator : MonoBehaviour
                 i++;
             }
             else {
-                if (Random.Range(0f, 1f) > 0.5f) { // Orientation coinflip
-                    float x = Random.Range(bottomLeftCorner.x + (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f, bottomRightCorner.x - (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f);
-                    objectPosition = new Vector3(x, bottomLeftCorner.y);
-                    // Instantiate the object
-                    GameObject instantiatedShark;
-                    // if (Random.Range(0f, 1f) <= fastSharkChance)
-                        instantiatedShark = Instantiate(slowSharkPrefab, objectPosition, Quaternion.identity);
-                    SharkController controller = instantiatedShark.GetComponent<SharkController>();
-                    controller.setInitialDirection(1f);
-                    controller.setShark(instantiatedShark);
+                float x = Random.Range(bottomLeftCorner.x + (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f, bottomRightCorner.x - (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f);
+                objectPosition = new Vector3(x, bottomLeftCorner.y);
+                // Instantiate the object
+                GameObject instantiatedShark;
+                SharkController controller;
+                if (Random.Range(0f, 1f) <= FAST_SHARK_CHANCE) { // Fast shark chance
+                    instantiatedShark = Instantiate(fastSharkPrefab, objectPosition, Quaternion.identity);
+                    controller = instantiatedShark.GetComponent<SharkController>();
+                    controller.setVelocity(false);
+                } else {
+                    instantiatedShark = Instantiate(slowSharkPrefab, objectPosition, Quaternion.identity);
+                    controller = instantiatedShark.GetComponent<SharkController>();
+                    controller.setVelocity(true);
                 }
-                else {
-                    float x = Random.Range(bottomLeftCorner.x + (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f, bottomRightCorner.x - (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f);
-                    objectPosition = new Vector3(x, bottomLeftCorner.y);
 
-                    // Instantiate the object
-                    GameObject instantiatedShark = Instantiate(slowSharkPrefab, objectPosition, Quaternion.identity);
-                    SharkController controller = instantiatedShark.GetComponent<SharkController>();
+                if (Random.Range(0f, 1f) > 0.5f) // orientation coinflip
+                    controller.setInitialDirection(1f);
+                else 
                     controller.setInitialDirection(-1f);
-                    controller.setShark(instantiatedShark);
-                }
+
+                controller.setShark(instantiatedShark);
             }
 
             // Wait for the specified interval before spawning the next object
-            yield return new WaitForSeconds(spawnInterval);
+            yield return new WaitForSeconds(Random.Range(2f, 4f));
         }
     }
 }

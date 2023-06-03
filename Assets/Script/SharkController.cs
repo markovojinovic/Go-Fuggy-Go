@@ -51,6 +51,13 @@ public class SharkController : MonoBehaviour
 
     public void setShark(GameObject shark) { this.shark = shark; }
 
+    public void setVelocity(bool slow) {
+        if (slow) 
+            velocity = Random.Range(1.2f, 1.8f);
+        else
+            velocity = Random.Range(1.8f, 2.5f);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.collider.gameObject.name == "TriggerUpper")
         {
