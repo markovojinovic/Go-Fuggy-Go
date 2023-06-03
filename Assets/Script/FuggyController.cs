@@ -11,6 +11,8 @@ public class FuggyController : MonoBehaviour
     private int scoreIncrement = 1;
     private double timeScoreUpdate = 1f;
     private int changeBound = 10;
+    private Animator animator;
+    public RuntimeAnimatorController pumpAnimationController, depumpAnimationController;
 
     public TextMeshProUGUI tmpText;
 
@@ -23,6 +25,11 @@ public class FuggyController : MonoBehaviour
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
+        animator.enabled = false;
+        pumpAnimationController = Resources.Load<RuntimeAnimatorController>("Assets/Animations/FuggyAnimationDepumpSprite_0.controller");
+        depumpAnimationController = Resources.Load<RuntimeAnimatorController>("Assets/Animations/FuggyAnimationPumpSprite_0.controller");
+        // animator.runtimeAnimatorController = pumpAnimationController;
         initialVelocity = new Vector2(0f, idleVerticalSpeed);
         cameraVelocity = new Vector3(0f, idleVerticalSpeed);
         rb = GetComponent<Rigidbody2D>();
@@ -39,10 +46,20 @@ public class FuggyController : MonoBehaviour
         tmpText.text = score.ToString();
 
         if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled){
-            Debug.Log("Aimacija za napumpavanje");
+            // animator.enabled = true;
+            // animator.Play("FuggyPumpAnimation");
+            idleVerticalSpeed = -0.7f;
+            initialVelocity = new Vector2(0f, idleVerticalSpeed);
+            cameraVelocity = new Vector3(0f, idleVerticalSpeed);
+            Invoke("DisableSpace", 7f);
         } else if(Input.GetKeyUp(KeyCode.Space) && spaceEnabled){
-            Debug.Log("Aimacija za ispumpavanje");
+            // animator.runtimeAnimatorController = depumpAnimationController;
+            // animator.Play("FuggyDepumpAnimation");
+            CancelInvoke("DisableSpace");
             spaceEnabled = false;
+            idleVerticalSpeed = -1f;
+            initialVelocity = new Vector2(0f, idleVerticalSpeed);
+            cameraVelocity = new Vector3(0f, idleVerticalSpeed);
             Invoke("EnableSpace", 5f);
         }
 
@@ -67,6 +84,13 @@ public class FuggyController : MonoBehaviour
         spaceEnabled = true;
     }
 
+    private void DisableSpace() {
+        spaceEnabled = false;
+        idleVerticalSpeed = -1f;
+        initialVelocity = new Vector2(0f, idleVerticalSpeed);
+        cameraVelocity = new Vector3(0f, idleVerticalSpeed);
+        Invoke("EnableSpace", 5f);
+    }
 
     private void setBoundaries() {
         Vector3 upperLeftCorner = ourCamera.ScreenToWorldPoint(new Vector3(0, Screen.height, ourCamera.nearClipPlane));
