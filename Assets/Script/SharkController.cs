@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class SharkController : MonoBehaviour
 {
@@ -13,10 +16,14 @@ public class SharkController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    public GameObject gameOverText;
+    public Camera camera;
+
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -64,7 +71,22 @@ public class SharkController : MonoBehaviour
         }
         else if (collider.gameObject.name == "Fuggy")
         {
-            Debug.Log("Udario fuggy");
+            // Debug.Log("Udario fuggy");
+             StopRendering();
         }
+    }
+
+    private void StopRendering()
+    {
+        Invoke("quitGame", 5f);
+        Instantiate(gameOverText, new Vector3(0f, 0f, 0f), Quaternion.identity);
+    }
+
+    private void quitGame(){
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #else
+                Application.Quit();
+        #endif
     }
 }
