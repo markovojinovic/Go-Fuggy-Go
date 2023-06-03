@@ -1,0 +1,773 @@
+fileFormatVersion: 2
+guid: 8abe4f4bbbb60814095dcd39dfbec499
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_0
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 3810
+        width: 379
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f6c259bbc08564a9436d57d8cbfae1
+      internalID: -1485392525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_1
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 3799
+        width: 404
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8681249e79d52e9468fdbe6dc0ded752
+      internalID: -243285795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_2
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 3790
+        width: 431
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d4823a8e5aa344d8a6b8be37a589db
+      internalID: 1759219019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_3
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 3778
+        width: 460
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17e82a9d1a09ea4faba4abce8bd23ac
+      internalID: 669995519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_4
+      rect:
+        serializedVersion: 2
+        x: 5190
+        y: 3770
+        width: 484
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8a1f514c3057a4e9b03aeca21b8dbf
+      internalID: -2015161314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_5
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 3038
+        width: 514
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6aa02641438bf4691157993ebf509a
+      internalID: -491663010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_6
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 3027
+        width: 541
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f178b9b7f762ef45888ac55700090ae
+      internalID: -2097090458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_7
+      rect:
+        serializedVersion: 2
+        x: 2747
+        y: 3018
+        width: 571
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f293542a01e7446b9224a3d289a79e
+      internalID: 2004091535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_8
+      rect:
+        serializedVersion: 2
+        x: 3933
+        y: 3009
+        width: 597
+        height: 449
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5c484ad266d2e4dbd4ca27220a0ff2
+      internalID: 1740354239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_9
+      rect:
+        serializedVersion: 2
+        x: 5122
+        y: 2998
+        width: 623
+        height: 469
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26962ef77d2489645a0a4e67797bfa5d
+      internalID: 779588075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_10
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 2266
+        width: 652
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e181e9042201140ba00b6afb563e38
+      internalID: 1254316668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_11
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2258
+        width: 679
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee00efa19229f84cbe9142662bd112b
+      internalID: 545869129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_12
+      rect:
+        serializedVersion: 2
+        x: 2679
+        y: 2246
+        width: 706
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b01d375cd265cf4facffb7d8d23a120
+      internalID: -210705691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_13
+      rect:
+        serializedVersion: 2
+        x: 3866
+        y: 2238
+        width: 735
+        height: 551
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e182bef1160c34da4a5801e33519af
+      internalID: 1975059232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_14
+      rect:
+        serializedVersion: 2
+        x: 5054
+        y: 2227
+        width: 760
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 918a21e37dfa2f14c9404d3084a38aa6
+      internalID: 1448626358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_15
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1479
+        width: 696
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd099465bf27f5042b151f0ba67135e6
+      internalID: 102838690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_16
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1495
+        width: 657
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a453a6bd1e83cd64485293b0a26cd7d1
+      internalID: 1474484301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_17
+      rect:
+        serializedVersion: 2
+        x: 2715
+        y: 1510
+        width: 630
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f90561696fa530459562ac0cffa7890
+      internalID: -1126131796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_18
+      rect:
+        serializedVersion: 2
+        x: 3930
+        y: 1523
+        width: 600
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec984c10aeafb34fba2e9736d39197c
+      internalID: -265118939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_19
+      rect:
+        serializedVersion: 2
+        x: 5145
+        y: 1538
+        width: 569
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08005b8e5866a740ab51d03d0951a8f
+      internalID: 1005990213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_20
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 830
+        width: 538
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619605d4a5d31a141b71621e7a73d4c8
+      internalID: 1821346342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_21
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 842
+        width: 510
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e5c6d0bb6ec27479901d8c4da71ec0
+      internalID: -1799577341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_22
+      rect:
+        serializedVersion: 2
+        x: 2790
+        y: 855
+        width: 480
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce5271ce28647c428a98209e3ef38f4
+      internalID: 1806780036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_23
+      rect:
+        serializedVersion: 2
+        x: 4006
+        y: 870
+        width: 449
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923779de466d4144294898de81e35b90
+      internalID: 2083093499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_24
+      rect:
+        serializedVersion: 2
+        x: 5219
+        y: 882
+        width: 422
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5bf042d5b814e489b5ae39fac5fd67
+      internalID: 959083000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_25
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 175
+        width: 391
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec684a072af52ff4d82386d3268e86f0
+      internalID: 350378327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_26
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 190
+        width: 361
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2cae40e8d30254eb22f5612795c9ff
+      internalID: 1640735006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_27
+      rect:
+        serializedVersion: 2
+        x: 2842
+        y: 210
+        width: 379
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b87e88509a0cfe42ab3d2faafb14df1
+      internalID: 974879327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuggyAnimationDepumpSprite_28
+      rect:
+        serializedVersion: 2
+        x: 4042
+        y: 210
+        width: 379
+        height: 284
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791466ff1a48b1444b783424a2cbaaa8
+      internalID: -400310252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      FuggyAnimationDepumpSprite_0: -1485392525
+      FuggyAnimationDepumpSprite_1: -243285795
+      FuggyAnimationDepumpSprite_10: 1254316668
+      FuggyAnimationDepumpSprite_11: 545869129
+      FuggyAnimationDepumpSprite_12: -210705691
+      FuggyAnimationDepumpSprite_13: 1975059232
+      FuggyAnimationDepumpSprite_14: 1448626358
+      FuggyAnimationDepumpSprite_15: 102838690
+      FuggyAnimationDepumpSprite_16: 1474484301
+      FuggyAnimationDepumpSprite_17: -1126131796
+      FuggyAnimationDepumpSprite_18: -265118939
+      FuggyAnimationDepumpSprite_19: 1005990213
+      FuggyAnimationDepumpSprite_2: 1759219019
+      FuggyAnimationDepumpSprite_20: 1821346342
+      FuggyAnimationDepumpSprite_21: -1799577341
+      FuggyAnimationDepumpSprite_22: 1806780036
+      FuggyAnimationDepumpSprite_23: 2083093499
+      FuggyAnimationDepumpSprite_24: 959083000
+      FuggyAnimationDepumpSprite_25: 350378327
+      FuggyAnimationDepumpSprite_26: 1640735006
+      FuggyAnimationDepumpSprite_27: 974879327
+      FuggyAnimationDepumpSprite_28: -400310252
+      FuggyAnimationDepumpSprite_3: 669995519
+      FuggyAnimationDepumpSprite_4: -2015161314
+      FuggyAnimationDepumpSprite_5: -491663010
+      FuggyAnimationDepumpSprite_6: -2097090458
+      FuggyAnimationDepumpSprite_7: 2004091535
+      FuggyAnimationDepumpSprite_8: 1740354239
+      FuggyAnimationDepumpSprite_9: 779588075
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
