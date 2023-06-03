@@ -784,6 +784,7 @@ MonoBehaviour:
   ourCamera: {fileID: 519420031}
   moveSpeed: 5
   score: 0
+  tmpText: {fileID: 850125000}
 --- !u!58 &1024852325
 CircleCollider2D:
   m_ObjectHideFlags: 0
