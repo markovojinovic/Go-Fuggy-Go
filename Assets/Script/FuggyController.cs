@@ -16,18 +16,38 @@ public class FuggyController : MonoBehaviour
     }
 
     private void Update(){
-        float horizontalInput = Input.GetAxis("Horizontal");
 
-        Vector3 movementDirection = new Vector3(horizontalInput, 0f);
+        if (Input.GetKey(KeyCode.LeftArrow))
+            initialVelocity.x = -moveSpeed;
+        else if (Input.GetKeyUp(KeyCode.LeftArrow))
+            initialVelocity.x = 0;
+        else if (Input.GetKey(KeyCode.RightArrow))
+            initialVelocity.x = moveSpeed;
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+            initialVelocity.x = 0;
+        
 
-        // Calculate the object's new position
-        Vector3 newPosition = transform.position + movementDirection * moveSpeed * Time.deltaTime;
+        rb.velocity = initialVelocity;
 
-        // Update the object's position
-        transform.position = newPosition;
-
+        Debug.Log(initialVelocity);
 
         camera.transform.position = new Vector3(0f, rb.transform.position.y, camera.transform.position.z);
     }
+
+
+
+    // private void OnTriggerEnter2D(Collider2D collision)
+    // {
+
+        
+    //     // Check if the collision involves a specific tag
+    //     if (collision.CompareTag("OutCollider"))
+    //     {
+    //         // Handle collision with the obstacle
+    //         Debug.Log("Collision with obstacle!");
+    //         // Add your custom code here to respond to the collision
+    //     }
+    // }
+
 
 }
