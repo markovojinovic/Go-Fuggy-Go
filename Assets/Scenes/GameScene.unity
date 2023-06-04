@@ -1094,12 +1094,12 @@ MonoBehaviour:
   moveSpeed: 0
   idleVerticalSpeed: -1.3
   score: 0
+  gameOverText: {fileID: 5220360317317252835, guid: 55dcdc902c0070c4892e8b0d6497e0f8, type: 3}
+  jellyCount: {fileID: 1303839142}
   tmpText: {fileID: 850125000}
   poisonCooldownTimeText: {fileID: 1776109112}
   pumpTimeText: {fileID: 1114254849}
-  poisonAvailable: 1
-  gameOverText: {fileID: 5220360317317252835, guid: 55dcdc902c0070c4892e8b0d6497e0f8, type: 3}
-  jellyCount: {fileID: 1303839142}
+  poisonAvailable: 0
 --- !u!58 &1024852325
 CircleCollider2D:
   m_ObjectHideFlags: 0

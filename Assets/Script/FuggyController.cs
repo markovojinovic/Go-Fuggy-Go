@@ -26,7 +26,7 @@ public class FuggyController : MonoBehaviour
     public TextMeshProUGUI pumpTimeText;
 
     private int poisonCooldownTime = 0;
-    public bool poisonAvailable = true;
+    public bool poisonAvailable = false;
     private int pumpTime = 0;
 
     private Rigidbody2D rb;
@@ -120,6 +120,8 @@ public class FuggyController : MonoBehaviour
             animator.SetBool("pumpItUp", true);
             animator.SetBool("dePump", false);
 
+            if (!poisonAvailable && poisonCooldownTime == 0)
+                poisonAvailable = true; 
             if (poisonAvailable)
                 poison.Play();
 
@@ -225,7 +227,8 @@ public class FuggyController : MonoBehaviour
 
     public void StopRendering()
     {
-        Invoke("quitGame", 2f);
+        Invoke("quitGame", 1f);
+        // Destroy(gameObject);
         Instantiate(gameOverText, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 
