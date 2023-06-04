@@ -8,7 +8,7 @@ public class FuggyController : MonoBehaviour
     public Vector2 fuggyVelocity;
     public Camera ourCamera;
     public float moveSpeed = 0;
-    public float idleVerticalSpeed = -1f;
+    public float idleVerticalSpeed = -1.3f;
     public int score = 0;
     private int scoreIncrement = 1;
     private double timeScoreUpdate = 1f;
@@ -108,7 +108,7 @@ public class FuggyController : MonoBehaviour
 
         switch (fuggyState) {
             case FuggyState.DEPUMPED:
-                idleVerticalSpeed = -1f;
+                idleVerticalSpeed = -1.3f;
                 break;
             case FuggyState.PUMPED:
                 idleVerticalSpeed = -0.7f;
