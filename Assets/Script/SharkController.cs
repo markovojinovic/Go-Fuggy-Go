@@ -13,8 +13,6 @@ public class SharkController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
-    public GameObject gameOverText;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -73,21 +71,8 @@ public class SharkController : MonoBehaviour
         }
         else if (collision.collider.gameObject.name == "Fuggy")
         {
-            StopRendering();
+            FuggyController fuggyController = collision.collider.gameObject.GetComponent<FuggyController>();
+            // fuggyController.StopRendering();
         }
-    }
-
-    private void StopRendering()
-    {
-        Invoke("quitGame", 2f);
-        Instantiate(gameOverText, new Vector3(0f, 0f, 0f), Quaternion.identity);
-    }
-
-    private void quitGame(){
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
-                Application.Quit();
-        #endif
     }
 }
