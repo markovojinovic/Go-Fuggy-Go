@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5621421842842118477}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: sharkChild
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7689403897665924992}
   - component: {fileID: 2723875228932242882}
   - component: {fileID: 1158483209479905914}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shark_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

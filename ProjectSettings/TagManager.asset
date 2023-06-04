@@ -7,6 +7,8 @@ TagManager:
   - OutCollider
   - Shark
   - Fuggy
+  - Jelly
+  - Anchor
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 

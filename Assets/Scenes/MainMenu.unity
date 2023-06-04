@@ -1613,7 +1613,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 29, y: 647}
+  m_AnchoredPosition: {x: 29, y: 628}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136207338
@@ -1636,7 +1636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: RUN, FUGGY, RUN
+  m_text: GO, FUGGY, GO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9e85e099e6e867f4d8d24db5407d4027, type: 2}
   m_sharedMaterial: {fileID: 8121252447059952531, guid: 9e85e099e6e867f4d8d24db5407d4027, type: 2}
