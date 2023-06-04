@@ -52,19 +52,23 @@ public class FuggyController : MonoBehaviour
 
         tmpText.text = score.ToString();
 
-        if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled){
-            // animator.enabled = true;
-            // animator.Play("FuggyPumpAnimation");
-            fuggyState = FuggyState.PUMPED;
-            Invoke("DisableSpace", 7f);
-        } else if(Input.GetKeyUp(KeyCode.Space) && spaceEnabled){
-            // animator.runtimeAnimatorController = depumpAnimationController;
-            // animator.Play("FuggyDepumpAnimation");
-            CancelInvoke("DisableSpace");
-            spaceEnabled = false;
-            fuggyState = FuggyState.DEPUMPED;
-            Invoke("EnableSpace", 5f);
+        if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled) {
+            togglePumpState();
         }
+
+        // if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled){
+        //     // animator.enabled = true;
+        //     // animator.Play("FuggyPumpAnimation");
+        //     fuggyState = FuggyState.PUMPED;
+        //     Invoke("DisableSpace", 7f);
+        // } else if(Input.GetKeyUp(KeyCode.Space) && spaceEnabled){
+        //     // animator.runtimeAnimatorController = depumpAnimationController;
+        //     // animator.Play("FuggyDepumpAnimation");
+        //     CancelInvoke("DisableSpace");
+        //     spaceEnabled = false;
+        //     fuggyState = FuggyState.DEPUMPED;
+        //     Invoke("EnableSpace", 5f);
+        // }
 
         constructVelocities();
         Vector2 newFuggyPosition = rb.position + fuggyVelocity * Time.deltaTime;
@@ -74,6 +78,21 @@ public class FuggyController : MonoBehaviour
             bubbleGameObject.transform.position = newFuggyPosition;
 
         ourCamera.transform.position += cameraVelocity * Time.deltaTime;
+    }
+
+    private void togglePumpState() {
+        if (fuggyState == FuggyState.DEPUMPED) {
+            fuggyState = FuggyState.PUMPED;
+            //play animaciju
+            spaceEnabled = false;
+            Invoke("EnableSpace", 1.5f);
+        } else 
+        if (fuggyState == FuggyState.PUMPED) {
+            fuggyState = FuggyState.DEPUMPED;
+            //play animaciju
+            spaceEnabled = false;
+            Invoke("EnableSpace", 1.5f);
+        }
     }
 
     private void constructVelocities() {
@@ -108,9 +127,9 @@ public class FuggyController : MonoBehaviour
 
     private void DisableSpace() {
         spaceEnabled = false;
-        idleVerticalSpeed = -1f;
-        fuggyVelocity = new Vector2(0f, idleVerticalSpeed);
-        cameraVelocity = new Vector3(0f, idleVerticalSpeed);
+        // idleVerticalSpeed = -1f;
+        // fuggyVelocity = new Vector2(0f, idleVerticalSpeed);
+        // cameraVelocity = new Vector3(0f, idleVerticalSpeed);
         Invoke("EnableSpace", 5f);
     }
 
