@@ -1,5 +1,8 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class FuggyController : MonoBehaviour
 {
@@ -14,10 +17,15 @@ public class FuggyController : MonoBehaviour
     private double timeScoreUpdate = 1f;
     private int changeBound = 10;
     private Animator animator;
-    public RuntimeAnimatorController pumpAnimationController;
     public GameObject gameOverText;
 
     public TextMeshProUGUI tmpText;
+    public TextMeshProUGUI poisonCooldownTimeText;
+    public TextMeshProUGUI pumpTimeText;
+
+    private int poisonCooldownTime = 0;
+    public bool poisonAvailable = true;
+    private int pumpTime = 0;
 
     private Rigidbody2D rb;
     private bool spaceEnabled = true;
@@ -37,9 +45,6 @@ public class FuggyController : MonoBehaviour
         poison = GetComponentInChildren<ParticleSystem>();
         poison.Stop();
         animator.enabled = true;
-        // pumpAnimationController = Resources.Load<RuntimeAnimatorController>("Assets/Animations/FuggyAnimationDepumpSprite_0.controller");
-
-        // animator.runtimeAnimatorController = pumpAnimationController;
         fuggyVelocity = new Vector2(0f, idleVerticalSpeed);
         cameraVelocity = new Vector3(0f, idleVerticalSpeed);
         rb = GetComponent<Rigidbody2D>();
@@ -54,24 +59,12 @@ public class FuggyController : MonoBehaviour
     private void Update(){
 
         tmpText.text = score.ToString();
+        poisonCooldownTimeText.text = (poisonCooldownTime.ToString() + "s");
+        pumpTimeText.text = (pumpTime.ToString() + "s");
 
         if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled) {
             togglePumpState();
         }
-
-        // if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled){
-        //     // animator.enabled = true;
-        //     // animator.Play("FuggyPumpAnimation");
-        //     fuggyState = FuggyState.PUMPED;
-        //     Invoke("DisableSpace", 7f);
-        // } else if(Input.GetKeyUp(KeyCode.Space) && spaceEnabled){
-        //     // animator.runtimeAnimatorController = depumpAnimationController;
-        //     // animator.Play("FuggyDepumpAnimation");
-        //     CancelInvoke("DisableSpace");
-        //     spaceEnabled = false;
-        //     fuggyState = FuggyState.DEPUMPED;
-        //     Invoke("EnableSpace", 5f);
-        // }
 
         constructVelocities();
         Vector2 newFuggyPosition = rb.position + fuggyVelocity * Time.deltaTime;
@@ -83,17 +76,51 @@ public class FuggyController : MonoBehaviour
         ourCamera.transform.position += cameraVelocity * Time.deltaTime;
     }
 
+    private IEnumerator pumpCountdown()
+    {   
+        pumpTime = 10;
+        while (fuggyState == FuggyState.PUMPED && pumpTime > 0)
+        {   
+            pumpTime--;
+            // Wait for the specified interval
+            yield return new WaitForSeconds(1f);
+        }
+        if (pumpTime == 0) {
+            togglePumpState();
+        }
+        pumpTime = 0;
+    }
+
+    private IEnumerator poisonCountdown()
+    {   
+        poisonCooldownTime = 25;
+        while (poisonCooldownTime > 0)
+        {   
+            poisonCooldownTime--;
+            // Wait for the specified interval
+            yield return new WaitForSeconds(1f);
+        }
+        poisonAvailable = true;
+    }
+    public void startPoisonCountdown() { StartCoroutine(poisonCountdown()); }
+
+    public void stopPoison() {
+        if (poisonAvailable)
+            poison.Stop();
+    }
+
     private void togglePumpState() {
         if (fuggyState == FuggyState.DEPUMPED) {
             fuggyState = FuggyState.PUMPED;
             //play animaciju
 
-            // pumpAnimationController.
             animator.SetBool("pumpItUp", true);
             animator.SetBool("dePump", false);
 
-            poison.Play();
+            if (poisonAvailable)
+                poison.Play();
 
+            StartCoroutine(pumpCountdown());
             spaceEnabled = false;
             Invoke("EnableSpace", 1.5f);
         } else 
@@ -104,7 +131,8 @@ public class FuggyController : MonoBehaviour
             animator.SetBool("pumpItUp", false);
             animator.SetBool("dePump", true);
 
-            poison.Stop();
+            if (poisonAvailable)
+                poison.Stop();
 
             spaceEnabled = false;
             Invoke("EnableSpace", 1.5f);
@@ -143,9 +171,6 @@ public class FuggyController : MonoBehaviour
 
     private void DisableSpace() {
         spaceEnabled = false;
-        // idleVerticalSpeed = -1f;
-        // fuggyVelocity = new Vector2(0f, idleVerticalSpeed);
-        // cameraVelocity = new Vector3(0f, idleVerticalSpeed);
         Invoke("EnableSpace", 5f);
     }
 
@@ -193,10 +218,11 @@ public class FuggyController : MonoBehaviour
     }
 
     private void quitGame(){
-        #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-        #else
-                Application.Quit();
-        #endif
+        // #if UNITY_EDITOR
+        //         UnityEditor.EditorApplication.isPlaying = false;
+        // #else
+        //         Application.Quit();
+        // #endif
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

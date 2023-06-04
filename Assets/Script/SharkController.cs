@@ -72,7 +72,14 @@ public class SharkController : MonoBehaviour
         else if (collision.collider.gameObject.name == "Fuggy")
         {
             FuggyController fuggyController = collision.collider.gameObject.GetComponent<FuggyController>();
-            // fuggyController.StopRendering();
+            if (fuggyController.poisonAvailable) {
+                Destroy(this.shark);
+                fuggyController.stopPoison();
+                fuggyController.poisonAvailable = false;
+                fuggyController.startPoisonCountdown();
+            } else {
+                fuggyController.StopRendering();
+            }
         }
     }
 }
