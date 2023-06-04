@@ -43,7 +43,7 @@ public class SharkGenerator : MonoBehaviour
                 i++;
             }
             else {
-                float x = Random.Range(bottomLeftCorner.x + (bottomRightCorner.x - bottomLeftCorner.x) * 0.15f, bottomRightCorner.x - (bottomRightCorner.x - bottomLeftCorner.x) * 0.15f);
+                float x = Random.Range(bottomLeftCorner.x + (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f, bottomRightCorner.x - (bottomRightCorner.x - bottomLeftCorner.x) * 0.2f);
                 objectPosition = new Vector3(x, bottomLeftCorner.y);
                 // Instantiate the object
                 GameObject instantiatedShark;
