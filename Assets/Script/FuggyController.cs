@@ -14,7 +14,7 @@ public class FuggyController : MonoBehaviour
     private double timeScoreUpdate = 1f;
     private int changeBound = 10;
     private Animator animator;
-    public RuntimeAnimatorController pumpAnimationController, depumpAnimationController;
+    public RuntimeAnimatorController pumpAnimationController;
     public GameObject gameOverText;
 
     public TextMeshProUGUI tmpText;
@@ -29,13 +29,16 @@ public class FuggyController : MonoBehaviour
     private GameObject bubbleGameObject;
     private const float MOVE_RIGHT = 5f;
     private const float MOVE_LEFT = -5f;
+    private ParticleSystem poison;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        animator.enabled = false;
-        pumpAnimationController = Resources.Load<RuntimeAnimatorController>("Assets/Animations/FuggyAnimationDepumpSprite_0.controller");
-        depumpAnimationController = Resources.Load<RuntimeAnimatorController>("Assets/Animations/FuggyAnimationPumpSprite_0.controller");
+        poison = GetComponentInChildren<ParticleSystem>();
+        poison.Stop();
+        animator.enabled = true;
+        // pumpAnimationController = Resources.Load<RuntimeAnimatorController>("Assets/Animations/FuggyAnimationDepumpSprite_0.controller");
+
         // animator.runtimeAnimatorController = pumpAnimationController;
         fuggyVelocity = new Vector2(0f, idleVerticalSpeed);
         cameraVelocity = new Vector3(0f, idleVerticalSpeed);
@@ -84,12 +87,25 @@ public class FuggyController : MonoBehaviour
         if (fuggyState == FuggyState.DEPUMPED) {
             fuggyState = FuggyState.PUMPED;
             //play animaciju
+
+            // pumpAnimationController.
+            animator.SetBool("pumpItUp", true);
+            animator.SetBool("dePump", false);
+
+            poison.Play();
+
             spaceEnabled = false;
             Invoke("EnableSpace", 1.5f);
         } else 
         if (fuggyState == FuggyState.PUMPED) {
             fuggyState = FuggyState.DEPUMPED;
+            
             //play animaciju
+            animator.SetBool("pumpItUp", false);
+            animator.SetBool("dePump", true);
+
+            poison.Stop();
+
             spaceEnabled = false;
             Invoke("EnableSpace", 1.5f);
         }
