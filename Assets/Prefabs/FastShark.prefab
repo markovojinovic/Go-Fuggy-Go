@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1120088437717877808}
   - component: {fileID: 759336853269017974}
   - component: {fileID: 4695370249908738780}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FastShark
   m_TagString: Shark
   m_Icon: {fileID: 0}

@@ -16,8 +16,12 @@ public class FuggyController : MonoBehaviour
     private Animator animator;
     public RuntimeAnimatorController pumpAnimationController;
     public GameObject gameOverText;
+    private int cnt = 0;
+    public TextMeshProUGUI jellyCount;
 
     public TextMeshProUGUI tmpText;
+    public TextMeshProUGUI poisonCooldownTimeText;
+    public TextMeshProUGUI pumpTimeText;
 
     private Rigidbody2D rb;
     private bool spaceEnabled = true;
@@ -54,6 +58,7 @@ public class FuggyController : MonoBehaviour
     private void Update(){
 
         tmpText.text = score.ToString();
+        jellyCount.text = cnt.ToString() + "x";
 
         if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled) {
             togglePumpState();
@@ -109,6 +114,15 @@ public class FuggyController : MonoBehaviour
             spaceEnabled = false;
             Invoke("EnableSpace", 1.5f);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Jelly"))
+        {
+           cnt++;
+        }
+        //Debug.Log("Pojeo meduzu");
     }
 
     private void constructVelocities() {
