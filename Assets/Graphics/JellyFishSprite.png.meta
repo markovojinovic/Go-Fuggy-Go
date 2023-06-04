@@ -1,0 +1,1201 @@
+fileFormatVersion: 2
+guid: c843e9532db792148b3eae2d4cec1ea9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: JellyFishSprite_0
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 5861
+        width: 225
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59b9bea2fb0f3644dad598e5789eaf9f
+      internalID: -1886702280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_1
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 5856
+        width: 224
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863db5c575e8a864c822958a0aa5c08d
+      internalID: -502273997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_2
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 5852
+        width: 224
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2fd679ea3fa64428b3ba7ee7278541
+      internalID: 2140814531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_3
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 5847
+        width: 225
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a03da2348537e614cb231cb98b45f7ad
+      internalID: 1103748718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_4
+      rect:
+        serializedVersion: 2
+        x: 4211
+        y: 5843
+        width: 225
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe39019bbf1cad4cb1be0db49b106a0
+      internalID: -619592718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_5
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 5198
+        width: 225
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cb9ee0c9b35ed448dfd8d4b2a3b6fe
+      internalID: -1904818181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_6
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 5193
+        width: 225
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede6b596a4164d64098b7c33509e7233
+      internalID: 1574630041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_7
+      rect:
+        serializedVersion: 2
+        x: 2291
+        y: 5188
+        width: 225
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179efd3f28eafa94685477181fd4e5e2
+      internalID: 1640076864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_8
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 5184
+        width: 225
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db034ea41e64bf04a94162a138e5a2c9
+      internalID: -255552359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_9
+      rect:
+        serializedVersion: 2
+        x: 4211
+        y: 5178
+        width: 226
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3864912bd19674d94a3a4554c6cf2c
+      internalID: -483827292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_10
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 4543
+        width: 225
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814ce21da4df9a64699afdb3db380489
+      internalID: 167941137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_11
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 4548
+        width: 226
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e95e2d9e7334f4b92c805e25e3b59a
+      internalID: 95232834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_12
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 4552
+        width: 226
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7da97a8a6a2eee4198517dd75397d94
+      internalID: 416869271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_13
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 4556
+        width: 227
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3abc3ef75d6148d40b2562674d23f72b
+      internalID: -1739232442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_14
+      rect:
+        serializedVersion: 2
+        x: 4210
+        y: 4560
+        width: 227
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7e86df2b1ae184a9d52724d3b35fd5
+      internalID: 561070900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_15
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 3925
+        width: 228
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bdeb168ce9c864aa77cd793ffc5ee2
+      internalID: -340951268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_16
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 3929
+        width: 229
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d523ae5e571a7b5488270affe2c1748d
+      internalID: -1232745366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_17
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 3933
+        width: 228
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec00d70906374f4f9a5031eda29042d
+      internalID: 1193315843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_18
+      rect:
+        serializedVersion: 2
+        x: 3249
+        y: 3937
+        width: 229
+        height: 379
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13c288373ac3e54ca780d7f49d286a9
+      internalID: -1069640823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_19
+      rect:
+        serializedVersion: 2
+        x: 4208
+        y: 3942
+        width: 230
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 326c78dc75791da4e9258eb79492a8be
+      internalID: 964516031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_20
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 3306
+        width: 230
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fe7098a350c0641aee645aa53ad232
+      internalID: -35849178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_21
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 3311
+        width: 230
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f51a333d3d6504683437a38847ed04
+      internalID: -882867021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_22
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 3315
+        width: 232
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afddc1ba075bc44448a8639db753caf9
+      internalID: 360609213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_23
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 3319
+        width: 232
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0c29c952354334b8f61c0b81892cd9
+      internalID: 761945405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_24
+      rect:
+        serializedVersion: 2
+        x: 4207
+        y: 3323
+        width: 232
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76213ccad9ca0234e8531989289f51e9
+      internalID: 2113835874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_25
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 2687
+        width: 232
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0346a27fa524d0c4e8585a9ffcf39fa3
+      internalID: -736350861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_26
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 2692
+        width: 233
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48d6a46409cd1442822becbb3ad46cf
+      internalID: 929878708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_27
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 2696
+        width: 233
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b70cefc6b13b5e5449dcaf808dcddf5a
+      internalID: -1200711912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_28
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 2700
+        width: 234
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69eeae733b7ca834b8ffbd95aeb4c27d
+      internalID: 1174305968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_29
+      rect:
+        serializedVersion: 2
+        x: 4206
+        y: 2698
+        width: 233
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e725ae0699292fe4d869980fea8c1091
+      internalID: 973904200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_30
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 2057
+        width: 233
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 685c4b9890fec9a45b1f24486ff6bf97
+      internalID: -1534686560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_31
+      rect:
+        serializedVersion: 2
+        x: 1326
+        y: 2055
+        width: 233
+        height: 398
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c15864ed1cd5e4eaa5a2653394579e
+      internalID: 1261247990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_32
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 2053
+        width: 232
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9796009f62136954d96b47269697c9cc
+      internalID: -49287397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_33
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 2050
+        width: 231
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad198154ac2eaa4284331ddddccf8e2
+      internalID: -950747306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_34
+      rect:
+        serializedVersion: 2
+        x: 4207
+        y: 2048
+        width: 231
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dea18daa4dfd544b4acfcc136fccf9
+      internalID: 872745052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_35
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1406
+        width: 231
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7761bfe030c61a34dbacdb87ebe06bde
+      internalID: 1816049519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_36
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1405
+        width: 229
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4fdacf1201d9f4992e4ad5b623acde
+      internalID: 839130461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_37
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 1403
+        width: 229
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 160515d52b4188a44ba0bab0b8d9d304
+      internalID: -946476752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_38
+      rect:
+        serializedVersion: 2
+        x: 3248
+        y: 1401
+        width: 229
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b91a179c25e994ebd5bd975169ee77
+      internalID: -1944728560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_39
+      rect:
+        serializedVersion: 2
+        x: 4208
+        y: 1398
+        width: 229
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06346caf1cf56dd4e85d9565e8fd482e
+      internalID: 39287113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_40
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 756
+        width: 227
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfe3d7c3103eb54dbf26235f630c623
+      internalID: -2054331079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_41
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 755
+        width: 227
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3584ad0126c25ab46a830c100def06cd
+      internalID: -358026277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_42
+      rect:
+        serializedVersion: 2
+        x: 2289
+        y: 753
+        width: 227
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab20da4841dfe047a50ea5442295aa5
+      internalID: -593888696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_43
+      rect:
+        serializedVersion: 2
+        x: 3249
+        y: 751
+        width: 227
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e34fd20ae6b3cf4390a2883ac0c3b55
+      internalID: -1822983329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_44
+      rect:
+        serializedVersion: 2
+        x: 4210
+        y: 749
+        width: 226
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae191e8a376ea9439cb8501467a6a4b
+      internalID: -2137417734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_45
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 107
+        width: 225
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44924a5d011b01144b896635ebf10da2
+      internalID: -267069026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_46
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 105
+        width: 226
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a3951c75687fa4ba1e00e889502641
+      internalID: 565717106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_47
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 103
+        width: 225
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbdc0e81cca5df458dc8d1369f04269
+      internalID: -916443128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JellyFishSprite_48
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 101
+        width: 225
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e965f14250c61d54496cb0bde5a7d4eb
+      internalID: 260372041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      JellyFishSprite_0: -1886702280
+      JellyFishSprite_1: -502273997
+      JellyFishSprite_10: 167941137
+      JellyFishSprite_11: 95232834
+      JellyFishSprite_12: 416869271
+      JellyFishSprite_13: -1739232442
+      JellyFishSprite_14: 561070900
+      JellyFishSprite_15: -340951268
+      JellyFishSprite_16: -1232745366
+      JellyFishSprite_17: 1193315843
+      JellyFishSprite_18: -1069640823
+      JellyFishSprite_19: 964516031
+      JellyFishSprite_2: 2140814531
+      JellyFishSprite_20: -35849178
+      JellyFishSprite_21: -882867021
+      JellyFishSprite_22: 360609213
+      JellyFishSprite_23: 761945405
+      JellyFishSprite_24: 2113835874
+      JellyFishSprite_25: -736350861
+      JellyFishSprite_26: 929878708
+      JellyFishSprite_27: -1200711912
+      JellyFishSprite_28: 1174305968
+      JellyFishSprite_29: 973904200
+      JellyFishSprite_3: 1103748718
+      JellyFishSprite_30: -1534686560
+      JellyFishSprite_31: 1261247990
+      JellyFishSprite_32: -49287397
+      JellyFishSprite_33: -950747306
+      JellyFishSprite_34: 872745052
+      JellyFishSprite_35: 1816049519
+      JellyFishSprite_36: 839130461
+      JellyFishSprite_37: -946476752
+      JellyFishSprite_38: -1944728560
+      JellyFishSprite_39: 39287113
+      JellyFishSprite_4: -619592718
+      JellyFishSprite_40: -2054331079
+      JellyFishSprite_41: -358026277
+      JellyFishSprite_42: -593888696
+      JellyFishSprite_43: -1822983329
+      JellyFishSprite_44: -2137417734
+      JellyFishSprite_45: -267069026
+      JellyFishSprite_46: 565717106
+      JellyFishSprite_47: -916443128
+      JellyFishSprite_48: 260372041
+      JellyFishSprite_5: -1904818181
+      JellyFishSprite_6: 1574630041
+      JellyFishSprite_7: 1640076864
+      JellyFishSprite_8: -255552359
+      JellyFishSprite_9: -483827292
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
