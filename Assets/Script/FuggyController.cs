@@ -6,20 +6,29 @@ using UnityEngine.SceneManagement;
 
 public class FuggyController : MonoBehaviour
 {
-    public enum FuggyState { DEPUMPED, PUMPED, IN_BUBBLE }
+    public enum FuggyState { DEPUMPED, PUMPED, IN_BUBBLE, DEAD }
+
+    private const float MOVE_RIGHT = 5f;
+    private const float MOVE_LEFT = -5f;
+    private const float DEPUMPED_VELOCITY = -1.5f;
+    private const float PUMPED_VELOCITY = -0.9f;
+    private const float IN_BUBBLE_VELOCITY = 1.1f;
+    private const float DEAD_VELOCITY = 0;
+    private const float DEPUMPED_COLLIDER_RADIUS = 1.367377f;
+    private const float PUMPED_COLLIDER_RADIUS = 3.248377f;
 
     public Vector2 fuggyVelocity;
     public Camera ourCamera;
     public float moveSpeed = 0;
-    public float idleVerticalSpeed = -1.3f;
+    public float verticalVelocity = -1.5f;
     public int score = 0;
     private int scoreIncrement = 1;
     private double timeScoreUpdate = 1f;
     private int changeBound = 10;
     private Animator animator;
     public GameObject gameOverText;
-    private int cnt = 0;
-    public TextMeshProUGUI jellyCount;
+    private int jellyCount = 0;
+    public TextMeshProUGUI jellyCountText;
 
     public TextMeshProUGUI tmpText;
     public TextMeshProUGUI poisonCooldownTimeText;
@@ -34,36 +43,28 @@ public class FuggyController : MonoBehaviour
     private float boundaryLeft;
     private float boundaryRight;
     private Vector3 cameraVelocity;
-    private CircleCollider2D circleCollider;
+    private CircleCollider2D fuggyCircleCollider;
     private FuggyState fuggyState = FuggyState.DEPUMPED;
     private GameObject bubbleGameObject;
-    private const float MOVE_RIGHT = 5f;
-    private const float MOVE_LEFT = -5f;
     private ParticleSystem poison;
 
-    private void Start()
-    {
+    private void Start() {
         animator = GetComponent<Animator>();
+        fuggyCircleCollider = GetComponent<CircleCollider2D>();
         poison = GetComponentInChildren<ParticleSystem>();
         poison.Stop();
         animator.enabled = true;
-        fuggyVelocity = new Vector2(0f, idleVerticalSpeed);
-        cameraVelocity = new Vector3(0f, idleVerticalSpeed);
         rb = GetComponent<Rigidbody2D>();
-        circleCollider = GetComponent<CircleCollider2D>();
-        Debug.Log(circleCollider.radius);
-
         setBoundaries();
-
         Invoke("IncrementScore", (float)timeScoreUpdate);
     }
 
-    private void Update(){
+    private void Update() {
 
         tmpText.text = score.ToString();
         poisonCooldownTimeText.text = (poisonCooldownTime.ToString() + "s");
         pumpTimeText.text = (pumpTime.ToString() + "s");
-        jellyCount.text = cnt.ToString() + "x";
+        jellyCountText.text = jellyCount.ToString() + "x";
 
         if(Input.GetKeyDown(KeyCode.Space) && spaceEnabled) {
             togglePumpState();
@@ -79,8 +80,7 @@ public class FuggyController : MonoBehaviour
         ourCamera.transform.position += cameraVelocity * Time.deltaTime;
     }
 
-    private IEnumerator pumpCountdown()
-    {   
+    private IEnumerator pumpCountdown() {   
         pumpTime = 10;
         while (fuggyState == FuggyState.PUMPED && pumpTime > 0)
         {   
@@ -94,8 +94,8 @@ public class FuggyController : MonoBehaviour
         pumpTime = 0;
     }
 
-    private IEnumerator poisonCountdown()
-    {   
+    public void startPoisonCountdown() { StartCoroutine(poisonCountdown()); }
+    private IEnumerator poisonCountdown() {   
         poisonCooldownTime = 25;
         while (poisonCooldownTime > 0)
         {   
@@ -105,7 +105,6 @@ public class FuggyController : MonoBehaviour
         }
         poisonAvailable = true;
     }
-    public void startPoisonCountdown() { StartCoroutine(poisonCountdown()); }
 
     public void stopPoison() {
         if (poisonAvailable)
@@ -115,8 +114,8 @@ public class FuggyController : MonoBehaviour
     private void togglePumpState() {
         if (fuggyState == FuggyState.DEPUMPED) {
             fuggyState = FuggyState.PUMPED;
-            //play animaciju
 
+            // Play pump animation
             animator.SetBool("pumpItUp", true);
             animator.SetBool("dePump", false);
 
@@ -127,30 +126,40 @@ public class FuggyController : MonoBehaviour
 
             StartCoroutine(pumpCountdown());
             spaceEnabled = false;
+            Invoke("UpdateFuggyCollider", 0.5f);
             Invoke("EnableSpace", 1.5f);
         } else 
         if (fuggyState == FuggyState.PUMPED) {
             fuggyState = FuggyState.DEPUMPED;
             
-            //play animaciju
+            // Play depump animation
             animator.SetBool("pumpItUp", false);
             animator.SetBool("dePump", true);
 
             if (poisonAvailable)
                 poison.Stop();
+            poisonAvailable = false;
 
             spaceEnabled = false;
+            Invoke("UpdateFuggyCollider", 0.5f);
             Invoke("EnableSpace", 1.5f);
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+    private void EnableSpace() {
+        spaceEnabled = true;
+    }
+
+    private void UpdateFuggyCollider() {
+        if (fuggyState == FuggyState.PUMPED)
+            fuggyCircleCollider.radius = PUMPED_COLLIDER_RADIUS;
+        else if (fuggyState == FuggyState.DEPUMPED)
+            fuggyCircleCollider.radius = DEPUMPED_COLLIDER_RADIUS;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Jelly"))
-        {
-           cnt++;
-        }
-        //Debug.Log("Pojeo meduzu");
+           jellyCount++;
     }
 
     private void constructVelocities() {
@@ -166,26 +175,20 @@ public class FuggyController : MonoBehaviour
 
         switch (fuggyState) {
             case FuggyState.DEPUMPED:
-                idleVerticalSpeed = -1.3f;
+                verticalVelocity = DEPUMPED_VELOCITY;
                 break;
             case FuggyState.PUMPED:
-                idleVerticalSpeed = -0.7f;
+                verticalVelocity = PUMPED_VELOCITY;
                 break;
             case FuggyState.IN_BUBBLE:
-                idleVerticalSpeed = 1f;
+                verticalVelocity = IN_BUBBLE_VELOCITY;
+                break;
+            case FuggyState.DEAD:
+                verticalVelocity = DEAD_VELOCITY;
                 break;
         }
-        fuggyVelocity = new Vector2(moveSpeed, idleVerticalSpeed);
-        cameraVelocity = new Vector3(0, idleVerticalSpeed);
-    }
-
-    private void EnableSpace() {
-        spaceEnabled = true;
-    }
-
-    private void DisableSpace() {
-        spaceEnabled = false;
-        Invoke("EnableSpace", 5f);
+        fuggyVelocity = new Vector2(moveSpeed, verticalVelocity);
+        cameraVelocity = new Vector3(0, verticalVelocity);
     }
 
     private void setBoundaries() {
@@ -196,8 +199,7 @@ public class FuggyController : MonoBehaviour
         boundaryRight = bottomRightCorner.x - 0.5f;
     }
     
-    private void IncrementScore()
-    {
+    private void IncrementScore() {
         score += scoreIncrement;
         if(timeScoreUpdate < 0.4 && score % changeBound == 0){
             scoreIncrement += 1;
@@ -225,19 +227,13 @@ public class FuggyController : MonoBehaviour
         Invoke("resetBubbleState", Random.Range(3f, 4f));
     }
 
-    public void StopRendering()
-    {
-        Invoke("quitGame", 1f);
-        // Destroy(gameObject);
+    public void StopGame() {
+        Invoke("quitGame", 2f);
+        fuggyState = FuggyState.DEAD;
         Instantiate(gameOverText, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 
-    private void quitGame(){
-        // #if UNITY_EDITOR
-        //         UnityEditor.EditorApplication.isPlaying = false;
-        // #else
-        //         Application.Quit();
-        // #endif
+    private void quitGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

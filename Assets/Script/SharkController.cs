@@ -11,12 +11,13 @@ public class SharkController : MonoBehaviour
     private const float LEFT_ORIENTED = 90f;
     private GameObject shark;
 
-    private SpriteRenderer spriteRenderer;
+    // private SpriteRenderer spriteRenderer;
+    // private PolygonCollider2D sharkCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        
     }
 
     // Update is called once per frame
@@ -31,29 +32,34 @@ public class SharkController : MonoBehaviour
 
     public void setInitialDirection(float dir) { 
         this.directionRight = dir;
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        // spriteRenderer = GetComponent<SpriteRenderer>();
+        // sharkCollider = GetComponent<PolygonCollider2D>();
 
         if (dir < 0)
-            spriteRenderer.flipX = !spriteRenderer.flipX;
+            flipShark();
         
     }
 
     public void changeDirection(float dir) { 
         this.directionRight = dir;
-        spriteRenderer.flipX = !spriteRenderer.flipX;
-        // if (dir > 0f)
-        //     transform.Rotate(0f, 0f, 2*RIGHT_ORIENTED);
-        // else 
-        //     transform.Rotate(0f, 0f, 2*LEFT_ORIENTED);
+        flipShark();
+    }
+
+    private void flipShark() {
+        // spriteRenderer.flipX = !spriteRenderer.flipX;
+        // Vector2[] points = sharkCollider.GetPath(0);
+        // System.Array.Reverse(points);
+        // sharkCollider.SetPath(0, points);
+        transform.Rotate(0, 180f, 0);
     }
 
     public void setShark(GameObject shark) { this.shark = shark; }
 
     public void setVelocity(bool slow) {
         if (slow) 
-            velocity = Random.Range(1.2f, 1.8f);
+            velocity = Random.Range(1.2f, 2f);
         else
-            velocity = Random.Range(1.8f, 2.5f);
+            velocity = Random.Range(2f, 2.7f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
@@ -78,7 +84,7 @@ public class SharkController : MonoBehaviour
                 fuggyController.poisonAvailable = false;
                 fuggyController.startPoisonCountdown();
             } else {
-                fuggyController.StopRendering();
+                fuggyController.StopGame();
             }
         }
     }

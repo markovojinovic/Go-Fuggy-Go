@@ -11,6 +11,10 @@ public class JellyFishController : MonoBehaviour
         if (collision.gameObject.CompareTag("Fuggy") || collision.gameObject.CompareTag("Anchor"))
         {
             Destroy(gameObject);
+        } 
+        else if (collision.collider.gameObject.name == "TriggerUpper")
+        {
+            Destroy(gameObject);
         }
     }
 }

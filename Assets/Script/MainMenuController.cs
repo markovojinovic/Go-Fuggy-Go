@@ -8,15 +8,15 @@ using UnityEngine;
 
 public class MainMenuController : MonoBehaviour
 {
-    public void PlayGame(){
+    public void PlayGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void SettingsGame(){
+    public void SettingsGame() {
         Debug.Log("Settings");
     }
 
-    public void QuitGame(){
+    public void QuitGame() {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #else

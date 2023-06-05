@@ -5,7 +5,7 @@ using UnityEngine;
 public class AnchorController : MonoBehaviour
 {
     private Vector3 velocity = new Vector3(0f, -4f);
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +30,7 @@ public class AnchorController : MonoBehaviour
         else if (collision.collider.gameObject.name == "Fuggy")
         {
             FuggyController fuggyController = collision.collider.gameObject.GetComponent<FuggyController>();
-            // fuggyController.StopRendering();
+            fuggyController.StopGame();
         }
     }
 }

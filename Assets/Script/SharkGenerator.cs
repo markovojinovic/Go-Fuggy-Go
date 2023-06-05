@@ -67,7 +67,7 @@ public class SharkGenerator : MonoBehaviour
             }
 
             // Wait for the specified interval before spawning the next object
-            yield return new WaitForSeconds(Random.Range(2f, 4f));
+            yield return new WaitForSeconds(Random.Range(2f, 3.5f));
         }
     }
 }

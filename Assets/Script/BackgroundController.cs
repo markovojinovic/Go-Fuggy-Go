@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundController : MonoBehaviour
 {
-    public Camera camera;
+    public Camera mainCamera;
     public GameObject backGorund; 
     private float size;
 
@@ -17,7 +17,7 @@ public class BackgroundController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Mathf.Abs(transform.position.y - camera.transform.position.y) >= 15f)
+        if(Mathf.Abs(transform.position.y - mainCamera.transform.position.y) >= 15f)
             transform.position = new Vector3(transform.position.x, backGorund.transform.position.y - size, transform.position.z);
     }
 }
